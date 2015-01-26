@@ -1,0 +1,100 @@
+#top, #bottom, #left, #right {
+  background: #d2f0ec;
+  /*background: white;*/
+  position: fixed;
+  }
+
+#left, #right {
+  top: 0; bottom: 0;
+  width: 9px;
+  }
+  #left { left: 0; }
+  #right { right: 0; }
+
+#top, #bottom {
+  left: 0; right: 0;
+  height: 9px;
+  }
+  #top { top: 0; }
+  #bottom { bottom: 0; }
+
+@media
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+{
+  #top, #bottom, #left, #right { display: none; }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*background: url(49H.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Muli', sans-serif;
+  font-weight: 270%;
+}
+
+hr {
+  border-top: 2px solid #eee;
+}
+
+a {
+  color: #ff3b89;
+  padding: 1px;
+}
+
+.left {
+  padding-top: 60px;
+  padding-left: 45px;
+  top: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/*table {
+  height: 130px;
+  position: fixed;
+  bottom: 0px;
+}*/
+
+#icon {
+  height: 130px;
+  width: 145px;
+  margin-right: 5px;
+  margin-top: -35px;
+  bottom: 0;
+}
+
+#logo {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+#sublogo {
+  margin-top: -15px;
+  font-size: 13px;
+}
+
+.content {
+  padding-top: 60px;
+  padding-right: 45px;
+  font-size: 15px;
+  text-align: right;
+  margin-top: ;
+}
+
+table {
+  text-align: left;
+}
+

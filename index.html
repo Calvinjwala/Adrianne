@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--[if lte IE 6]>
+  <style>#top, #bottom, #left, #right { display: none; }</style>
+  <![endif]-->
+
+  <meta charset="UTF-8">
+  <title>Adrianne Jhunjhnuwala</title>
+
+  <!-- JQUERY -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+ <!-- FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="adri.css">
+
+
+
+</head>
+<body>
+
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div class="container-fluid">
+  <div class="rows col-lg-12">
+    <div class="left col-lg-6">
+      <section>
+        <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
+        <p id="logo">Adrianne J</p>
+        <p id="sublogo">High Fashion Make-Up Artist</p>
+      </section>
+    </div>
+
+    <div class="content col-lg-6">
+      <div class="tableOfContents">
+        <a href="#" class="adri" title="about">About</a><br>
+        <a href="#" class="adri" title="services">Services</a><br>
+        <a href="#" class="adri" title="portfolio">Portfolio</a><br>
+        <a href="#" class="adri" title="contact">Contact</a><br>
+        <hr>
+      </div>
+
+      <section class="adri current" id="about">
+        <h3>About Me</h3><br>
+        <h4>Origins</h4>
+        <p>Born in Hong Kong. Raised in Southern California.</p><br>
+        <p>After working as a technology-specialist at a financial company, I decided to pursue my true passion of art through make up.</p>
+      </section>
+      <section class="adri" id="services">
+        <h3>Services</h3><br>
+        <table class="table table-bordered">
+          <tr>
+            <th>Price</th>
+            <th>Package</th>
+            <th>Specs</th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>$50</td>
+              <td>Hourly</td>
+              <td>Clients will receive facial treatment as well as make up</td>
+            </tr>
+            <tr>
+              <td>$250</td>
+              <td>Flatrate</td>
+              <td>Fixed price for up to 4 hours</td>
+            </tr>
+            <tr>
+              <td>$350</td>
+              <td>Weddings</td>
+              <td>Includes bridesmaids and any wedding member</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </section>
+      <section class="adri" id="portfolio">
+        <h3>Portfolio</h3><br>
+        <p>Photos!</p>
+      </section>
+      <section class="adri" id="contact">
+        <h3>Contact</h3><br>
+        <p></p>
+      </section>
+    </div>
+  </div>
+
+ <!--  <footer>
+      <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
+    </footer> -->
+</div>
+
+<script>
+
+$(document).ready(function() {
+  if (window.innerWidth < 950) {
+    $('.left').css({
+      'text-align': 'center',
+      'padding-left': '0px'
+    });
+    $('#logo').css({
+      'margin-top': '0px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'center',
+      'padding-right': '-15px',
+      'margin-top': '-25px'
+    });
+    // $('.content').css({
+    //   'padding-right': '0px'
+    // });
+  }
+});
+
+$(window).resize(function() {
+  if (window.innerWidth < 950) {
+    $('.left').css({
+      'text-align': 'center',
+      'padding-left': '0px'
+    });
+    $('#logo').css({
+      'margin-top': '0px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'center',
+      'padding-right': '-15px',
+      'margin-top': '-25px'
+    });
+  }
+  else if (window.innerWidth >= 950) {
+    $('.left').css({
+      'text-align': 'left',
+      'padding-left': '15px'
+    });
+    $('#logo').css({
+      'margin-top': '30px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'right',
+      'padding-right': '0px',
+      'margin-top': '0px'
+    });
+  };
+});
+    // console.log("less than 850 px");
+    // console.log($('div.left'));
+    // $('div.left').addClass('center');
+    // var left = document.getElementsByClassName("left");
+    // console.log(left);
+    // section.append(".center");
+
+$('#about, #services, #portfolio, #contact').hide();
+
+$('.adri').click(function() {
+    var id = (this.title);
+    // console.log(id);
+    var $content = $('#' + id + ':not(:visible)');
+    if ($('.current').length === 0) {
+      showContent($content);
+    }
+    else
+      $('.current').fadeOut(300, function() {
+        showContent($content);
+      });
+    });
+
+function showContent(content) {
+    content.fadeIn(600);
+    $('.current').removeClass('current');
+    content.addClass('current');
+}
+</script>
+
+</body>
+</html>
