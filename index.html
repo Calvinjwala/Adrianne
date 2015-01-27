@@ -8,20 +8,21 @@
   <meta charset="UTF-8">
   <title>Adrianne Jhunjhnuwala</title>
 
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
   <!-- JQUERY -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
  <!-- FONTS -->
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="adri.css">
-
-
 
 </head>
 <body>
@@ -33,7 +34,8 @@
 
 <div class="container-fluid">
   <div class="rows col-lg-12">
-    <div class="left col-lg-6">
+
+    <div class="nameDisplay col-md-6">
       <section>
         <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
         <p id="logo">Adrianne J</p>
@@ -41,7 +43,7 @@
       </section>
     </div>
 
-    <div class="content col-lg-6">
+    <div class="content col-md-6">
       <div class="tableOfContents">
         <a href="#" class="adri" title="about">About</a><br>
         <a href="#" class="adri" title="services">Services</a><br>
@@ -50,13 +52,13 @@
         <hr>
       </div>
 
-      <section class="adri current" id="about">
+      <section class="current" id="about">
         <h3>About Me</h3><br>
         <h4>Origins</h4>
         <p>Born in Hong Kong. Raised in Southern California.</p><br>
         <p>After working as a technology-specialist at a financial company, I decided to pursue my true passion of art through make up.</p>
       </section>
-      <section class="adri" id="services">
+      <section id="services">
         <h3>Services</h3><br>
         <table class="table table-bordered">
           <tr>
@@ -84,13 +86,81 @@
 
         </table>
       </section>
-      <section class="adri" id="portfolio">
+      <section id="portfolio">
         <h3>Portfolio</h3><br>
-        <p>Photos!</p>
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active banner_image" id="image1">
+                <img src="49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image" id="image2">
+                <img src="49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image" id="image3">
+                <img src="49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image" id="image4">
+                <img src="49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image" id="image5">
+                <img src="49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image" id="image6">
+                <img src="49H.jpg" alt="...">
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+          <!-- Carousel -->
+
       </section>
-      <section class="adri" id="contact">
+      <section id="contact">
         <h3>Contact</h3><br>
-        <p></p>
+        <form class="well col-md-12">
+
+          <div class="col-md-4">
+            <label>First Name</label>
+            <input type="text"  placeholder="Your First Name"><br>
+            <label>Last Name</label>
+            <input type="text"  placeholder="Your Last Name"><br>
+            <label>Email Address</label>
+            <input type="text"  placeholder="Your email address"><br>
+            <label>Subject
+            <select id="subject" name="subject">
+              <option value="na" selected="">Choose One:</option>
+              <option value="personal">Personal </option>
+              <option value="wedding">Wedding</option>
+              <option value="party">Party</option>
+            </select>
+            </label>
+          </div>
+
+          <div class="col-md-8">
+            <label style="margin-left: 20px">Message</label><br>
+            <textarea name="message" id="message" class="input col-md-8" rows="10"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary pull-right">Send</button>
+
+        </form>
       </section>
     </div>
   </div>
@@ -102,9 +172,15 @@
 
 <script>
 
+
+$('.carousel').carousel({
+    interval: 3000
+});
+
+
 $(document).ready(function() {
   if (window.innerWidth < 950) {
-    $('.left').css({
+    $('.nameDisplay').css({
       'text-align': 'center',
       'padding-left': '0px'
     });
@@ -116,15 +192,12 @@ $(document).ready(function() {
       'padding-right': '-15px',
       'margin-top': '-25px'
     });
-    // $('.content').css({
-    //   'padding-right': '0px'
-    // });
   }
 });
 
 $(window).resize(function() {
   if (window.innerWidth < 950) {
-    $('.left').css({
+    $('.nameDisplay').css({
       'text-align': 'center',
       'padding-left': '0px'
     });
@@ -138,7 +211,7 @@ $(window).resize(function() {
     });
   }
   else if (window.innerWidth >= 950) {
-    $('.left').css({
+    $('.nameDisplay').css({
       'text-align': 'left',
       'padding-left': '15px'
     });
@@ -150,14 +223,9 @@ $(window).resize(function() {
       'padding-right': '0px',
       'margin-top': '0px'
     });
-  };
+  }
 });
-    // console.log("less than 850 px");
-    // console.log($('div.left'));
-    // $('div.left').addClass('center');
-    // var left = document.getElementsByClassName("left");
-    // console.log(left);
-    // section.append(".center");
+
 
 $('#about, #services, #portfolio, #contact').hide();
 
@@ -175,7 +243,7 @@ $('.adri').click(function() {
     });
 
 function showContent(content) {
-    content.fadeIn(600);
+    content.fadeIn(300);
     $('.current').removeClass('current');
     content.addClass('current');
 }

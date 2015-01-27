@@ -52,7 +52,20 @@ a {
   padding: 1px;
 }
 
-.left {
+table {
+  text-align: left;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  margin-top: 5px;
+}
+
+/* SECTION STYLING */
+.nameDisplay {
   padding-top: 60px;
   padding-left: 45px;
   top: 0;
@@ -62,12 +75,16 @@ a {
   text-align: center;
 }
 
-/*table {
-  height: 130px;
-  position: fixed;
-  bottom: 0px;
-}*/
+/* TABLE OF CONTENTS */
+.content {
+  padding-top: 60px;
+  padding-right: 45px;
+  font-size: 15px;
+  text-align: right;
+  margin-top: ;
+}
 
+/* BANNER STYLING */
 #icon {
   height: 130px;
   width: 145px;
@@ -86,15 +103,51 @@ a {
   font-size: 13px;
 }
 
-.content {
-  padding-top: 60px;
-  padding-right: 45px;
-  font-size: 15px;
-  text-align: right;
-  margin-top: ;
+
+/* CAROUSEL STYLING */
+.item {
+  display: block;
+  position: absolute;
+  overflow: hidden;
 }
 
-table {
-  text-align: left;
+.banner_image {
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: bottom;
 }
+
+#image1 {
+  background-image: url("images/49H.jpg");
+}
+
+#image2 {
+  background-image: url("images/49H.jpg");
+}
+
+#image3 {
+  background-image: url("images/49H.jpg");
+}
+
+#image4 {
+  background-image: url("images/49H.jpg");
+}
+
+#image5 {
+  background-image: url("images/49H.jpg");
+}
+
+#image6 {
+  background-image: url("images/49H.jpg");
+}
+/* end of carousel*/
+
+
+/* FORM STYLING*/
+.input {
+  margin-left: 20px;
+  width: 100%;
+  font-size: 13px;
+}
+
 
