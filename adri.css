@@ -36,18 +36,17 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  /*background: url(49H.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Vollkorn', serif;
-  font-weight: 270%;
 }
 
 hr {
-  border-top: 3px solid #eee;
-  /*margin-top: 30px;*/
+  border-top: 2px solid #eee;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 
@@ -55,7 +54,7 @@ a {
   /*color: #ff3b89;*/
   color: black;
   padding: 5px;
-  border: 2px solid #485f77;
+  /*border: 1px solid black;*/
 }
 
 a:hover {
@@ -78,14 +77,15 @@ label {
 .nameDisplay {
   padding-top: 45px;
   top: 0;
+  text-align: center;
 }
 
 #name {
   font-size: 24px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: -10px;
   margin-bottom: -3px;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
 }
 
 .navbar {
@@ -95,8 +95,8 @@ label {
 
 .toc {
   margin-bottom: 5px;
-  margin-left: 22px;
-  margin-right: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #makeup {
@@ -111,8 +111,12 @@ label {
 /* END OF HEADER*/
 
 /* BEGINNING OF BODY CONTENT*/
+.body {
+  padding-top: 18px;
+}
+
 .title {
-  text-align: center;
+  /*text-align: center;*/
   font-size: 32px;
 }
 

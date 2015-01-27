@@ -27,6 +27,9 @@
 </head>
 <body>
 
+<div class="intro"></div>
+
+
 <div id="left"></div>
 <div id="right"></div>
 <div id="top"></div>
@@ -36,11 +39,11 @@
   <div class="rows col-lg-12">
 
     <div class="nameDisplay">
-        <p id="name">-  ADRIANNE YAMAGUCHI  -</p>
-      <section class="navbar">
-        <a href="#" class="adri toc" title="about">About</a>
-        <a href="#" class="adri toc" title="portfolio">Portfolio</a>
         <img src="makeup.png" class="toc" id="makeup" alt=""></img>
+        <p id="name"> ADRIANNE YAMAGUCHI </p>
+      <section class="navbar">
+        <a href="#" class="adri toc" title="portfolio">Work</a>
+        <a href="#" class="adri toc" title="about">About</a>
         <a href="#" class="adri toc" title="services">Services</a>
         <a href="#" class="adri toc" title="contact">Contact</a>
       </section>
@@ -187,6 +190,11 @@
 //   }
 // });
 
+$('.intro').click(function() {
+  $('body').css({
+    'background': 'none'
+  });
+});
 
 $('#services, #portfolio, #contact').hide();
 
