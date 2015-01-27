@@ -19,7 +19,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
  <!-- FONTS -->
-  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="adri.css">
@@ -34,24 +34,21 @@
 
 <div class="container-fluid">
   <div class="rows col-lg-12">
-
-    <div class="nameDisplay col-md-6">
+    <div class="nameDisplay col-md-12">
       <section>
-        <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
         <p id="logo">Adrianne J</p>
         <p id="sublogo">High Fashion Make-Up Artist</p>
       </section>
     </div>
+    <div class="tableOfContents">
+      <a href="#" class="adri" title="about">About</a>
+      <a href="#" class="adri" title="services">Services</a>
+      <a href="#" class="adri" title="portfolio">Portfolio</a>
+      <a href="#" class="adri" title="contact">Contact</a>
+      <hr>
+    </div>
 
-    <div class="content col-md-6">
-      <div class="tableOfContents">
-        <a href="#" class="adri" title="about">About</a><br>
-        <a href="#" class="adri" title="services">Services</a><br>
-        <a href="#" class="adri" title="portfolio">Portfolio</a><br>
-        <a href="#" class="adri" title="contact">Contact</a><br>
-        <hr>
-      </div>
-
+    <div class="body">
       <section class="current" id="about">
         <h3>About Me</h3><br>
         <h4>Origins</h4>
@@ -89,49 +86,6 @@
       <section id="portfolio">
         <h3>Portfolio</h3><br>
 
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active banner_image" id="image1">
-                <img src="49H.jpg" alt="...">
-              </div>
-              <div class="item banner_image" id="image2">
-                <img src="49H.jpg" alt="...">
-              </div>
-              <div class="item banner_image" id="image3">
-                <img src="49H.jpg" alt="...">
-              </div>
-              <div class="item banner_image" id="image4">
-                <img src="49H.jpg" alt="...">
-              </div>
-              <div class="item banner_image" id="image5">
-                <img src="49H.jpg" alt="...">
-              </div>
-              <div class="item banner_image" id="image6">
-                <img src="49H.jpg" alt="...">
-              </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </div>
-          <!-- Carousel -->
-
       </section>
       <section id="contact">
         <h3>Contact</h3><br>
@@ -155,8 +109,8 @@
           </div>
 
           <div class="col-md-8">
-            <label style="margin-left: 20px">Message</label><br>
-            <textarea name="message" id="message" class="input col-md-8" rows="10"></textarea>
+            <label class="emails">Message</label><br>
+            <textarea name="message" id="message" class="emails input col-md-8" rows="10"></textarea>
           </div>
           <button type="submit" class="btn btn-primary pull-right">Send</button>
 
@@ -164,7 +118,6 @@
       </section>
     </div>
   </div>
-
  <!--  <footer>
       <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
     </footer> -->
@@ -192,6 +145,9 @@ $(document).ready(function() {
       'padding-right': '-15px',
       'margin-top': '-25px'
     });
+    $('.emails').css({
+      'margin-left': '0px'
+    });
   }
 });
 
@@ -209,6 +165,9 @@ $(window).resize(function() {
       'padding-right': '-15px',
       'margin-top': '-25px'
     });
+    $('.emails').css({
+      'margin-left': '0px'
+    });
   }
   else if (window.innerWidth >= 950) {
     $('.nameDisplay').css({
@@ -223,16 +182,19 @@ $(window).resize(function() {
       'padding-right': '0px',
       'margin-top': '0px'
     });
+    $('.emails').css({
+      'margin-left': '20px'
+    });
   }
 });
 
 
-$('#about, #services, #portfolio, #contact').hide();
+$('#services, #portfolio, #contact').hide();
 
 $('.adri').click(function() {
     var id = (this.title);
     // console.log(id);
-    var $content = $('#' + id + ':not(:visible)');
+    var $content = $('#' + id);
     if ($('.current').length === 0) {
       showContent($content);
     }

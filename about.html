@@ -1,3 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--[if lte IE 6]>
+  <style>#top, #bottom, #left, #right { display: none; }</style>
+  <![endif]-->
+
+  <meta charset="UTF-8">
+  <title>Adrianne Jhunjhnuwala</title>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- JQUERY -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+ <!-- FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="adri.css">
+
+</head>
+<body>
+
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div class="container-fluid">
+  <div class="rows col-lg-12">
+
+    <div class="nameDisplay col-md-6">
+      <section>
+        <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
+        <p id="logo">Adrianne J</p>
+        <p id="sublogo">High Fashion Make-Up Artist</p>
+      </section>
+
+        <!-- <div id="carousel-example-generic" class="carousel slide col-md-11" data-ride="carousel"> -->
+          <!-- Indicators -->
+          <!-- <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+          </ol> -->
+
+          <!-- Wrapper for slides -->
+           <!-- <div class="carousel-inner">
+              <div class="item active banner_image">
+                <img src="images/49H.jpg" alt="...">
+              </div>
+              <div class="item banner_image">
+                <img src="images/disco.jpg" alt="...">
+              </div>
+              <div class="item banner_image">
+                <img src="images/dj.jpg" alt="...">
+              </div>
+              <div class="item banner_image">
+                <img src="images/dj2.jpg" alt="...">
+              </div>
+              <div class="item banner_image">
+                <img src="images/roller.jpg" alt="...">
+              </div>
+            </div> -->
+
+          <!-- Controls -->
+          <!-- <a class="left" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div> -->
+        <!-- Carousel -->
+    </div>
+
+    <div class="content col-md-6">
+      <div class="tableOfContents">
+        <a href="#" class="adri" title="about">About</a><br>
+        <a href="#" class="adri" title="services">Services</a><br>
+        <a href="#" class="adri" title="portfolio">Portfolio</a><br>
+        <a href="#" class="adri" title="contact">Contact</a><br>
+        <hr>
+      </div>
+
+      <section class="current" id="about">
+        <h3>About Me</h3><br>
+        <h4>Origins</h4>
+        <p>Born in Hong Kong. Raised in Southern California.</p><br>
+        <p>After working as a technology-specialist at a financial company, I decided to pursue my true passion of art through make up.</p>
+      </section>
+      <section id="services">
+        <h3>Services</h3><br>
+        <table class="table table-bordered">
+          <tr>
+            <th>Price</th>
+            <th>Package</th>
+            <th>Specs</th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>$50</td>
+              <td>Hourly</td>
+              <td>Clients will receive facial treatment as well as make up</td>
+            </tr>
+            <tr>
+              <td>$250</td>
+              <td>Flatrate</td>
+              <td>Fixed price for up to 4 hours</td>
+            </tr>
+            <tr>
+              <td>$350</td>
+              <td>Weddings</td>
+              <td>Includes bridesmaids and any wedding member</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </section>
+      <section id="portfolio">
+        <h3>Portfolio</h3><br>
+
+      </section>
+      <section id="contact">
+        <h3>Contact</h3><br>
         <form class="well col-md-12">
 
           <div class="col-md-4">
@@ -18,9 +151,251 @@
           </div>
 
           <div class="col-md-8">
-            <label style="margin-left: 20px">Message</label><br>
-            <textarea name="message" id="message" class="input col-md-8" rows="10"></textarea>
-            <button type="submit" class="btn btn-primary pull-right">Send</button>
+            <label class="emails">Message</label><br>
+            <textarea name="message" id="message" class="emails input col-md-8" rows="10"></textarea>
           </div>
+          <button type="submit" class="btn btn-primary pull-right">Send</button>
 
         </form>
+      </section>
+    </div>
+  </div>
+
+ <!--  <footer>
+      <img src="makeup.png" id="icon" alt="" class="col-lg-4"></img>
+    </footer> -->
+</div>
+
+<script>
+
+
+$('.carousel').carousel({
+    interval: 3000
+});
+
+
+$(document).ready(function() {
+  if (window.innerWidth < 950) {
+    $('.nameDisplay').css({
+      'text-align': 'center',
+      'padding-left': '0px'
+    });
+    $('#logo').css({
+      'margin-top': '0px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'center',
+      'padding-right': '-15px',
+      'margin-top': '-25px'
+    });
+    $('.emails').css({
+      'margin-left': '0px'
+    });
+  }
+});
+
+$(window).resize(function() {
+  if (window.innerWidth < 950) {
+    $('.nameDisplay').css({
+      'text-align': 'center',
+      'padding-left': '0px'
+    });
+    $('#logo').css({
+      'margin-top': '0px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'center',
+      'padding-right': '-15px',
+      'margin-top': '-25px'
+    });
+    $('.emails').css({
+      'margin-left': '0px'
+    });
+  }
+  else if (window.innerWidth >= 950) {
+    $('.nameDisplay').css({
+      'text-align': 'left',
+      'padding-left': '15px'
+    });
+    $('#logo').css({
+      'margin-top': '30px'
+    });
+    $('.tableOfContents').css({
+      'text-align': 'right',
+      'padding-right': '0px',
+      'margin-top': '0px'
+    });
+    $('.emails').css({
+      'margin-left': '20px'
+    });
+  }
+});
+
+
+$('#services, #portfolio, #contact').hide();
+
+$('.adri').click(function() {
+    var id = (this.title);
+    // console.log(id);
+    var $content = $('#' + id);
+    if ($('.current').length === 0) {
+      showContent($content);
+    }
+    else
+      $('.current').fadeOut(300, function() {
+        showContent($content);
+      });
+    });
+
+function showContent(content) {
+    content.fadeIn(300);
+    $('.current').removeClass('current');
+    content.addClass('current');
+}
+</script>
+
+</body>
+</html>
+
+
+
+#top, #bottom, #left, #right {
+  background: #d2f0ec;
+  /*background: white;*/
+  position: fixed;
+  }
+
+#left, #right {
+  top: 0; bottom: 0;
+  width: 9px;
+  }
+  #left { left: 0; }
+  #right { right: 0; }
+
+#top, #bottom {
+  left: 0; right: 0;
+  height: 9px;
+  }
+  #top { top: 0; }
+  #bottom { bottom: 0; }
+
+@media
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+{
+  #top, #bottom, #left, #right { display: none; }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*background: url(49H.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Vollkorn', serif;
+  font-weight: 270%;
+}
+
+hr {
+  border-top: 2px solid #eee;
+}
+
+a {
+  color: #ff3b89;
+  padding: 1px;
+}
+
+table {
+  text-align: left;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  margin-top: 5px;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  padding-top: 15px;
+}
+
+.right {
+  margin-right: 0;
+}
+
+/* SECTION STYLING */
+.nameDisplay {
+  padding-top: 60px;
+  padding-left: 45px;
+  top: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/* TABLE OF CONTENTS */
+.content {
+  padding-top: 60px;
+  padding-right: 45px;
+  font-size: 15px;
+  text-align: right;
+  margin-top: ;
+}
+
+/* BANNER STYLING */
+#icon {
+  height: 130px;
+  width: 145px;
+  margin-right: 5px;
+  margin-top: -45px;
+  bottom: 0;
+}
+
+#logo {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+#sublogo {
+  margin-top: -15px;
+  font-size: 13px;
+}
+
+
+/* CAROUSEL STYLING */
+.item {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+.banner_image {
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+/* end of carousel*/
+
+
+/* FORM STYLING*/
+.input {
+  width: 100%;
+  font-size: 13px;
+}
+
+.emails {
+  margin-left: 20px;
+}
+
+
