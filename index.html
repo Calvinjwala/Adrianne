@@ -34,29 +34,28 @@
 
 <div class="container-fluid">
   <div class="rows col-lg-12">
-    <div class="nameDisplay col-md-12">
-      <section>
-        <p id="logo">Adrianne J</p>
-        <p id="sublogo">High Fashion Make-Up Artist</p>
+
+    <div class="nameDisplay">
+        <p id="name">-  ADRIANNE YAMAGUCHI  -</p>
+      <section class="navbar">
+        <a href="#" class="adri toc" title="about">About</a>
+        <a href="#" class="adri toc" title="portfolio">Portfolio</a>
+        <img src="makeup.png" class="toc" id="makeup" alt=""></img>
+        <a href="#" class="adri toc" title="services">Services</a>
+        <a href="#" class="adri toc" title="contact">Contact</a>
       </section>
     </div>
-    <div class="tableOfContents">
-      <a href="#" class="adri" title="about">About</a>
-      <a href="#" class="adri" title="services">Services</a>
-      <a href="#" class="adri" title="portfolio">Portfolio</a>
-      <a href="#" class="adri" title="contact">Contact</a>
-      <hr>
-    </div>
+
+    <hr>
 
     <div class="body">
       <section class="current" id="about">
-        <h3>About Me</h3><br>
-        <h4>Origins</h4>
+        <h3 class="title">About Me</h3 class="title">
         <p>Born in Hong Kong. Raised in Southern California.</p><br>
         <p>After working as a technology-specialist at a financial company, I decided to pursue my true passion of art through make up.</p>
       </section>
       <section id="services">
-        <h3>Services</h3><br>
+        <h3 class="title">Services</h3><br>
         <table class="table table-bordered">
           <tr>
             <th>Price</th>
@@ -84,11 +83,11 @@
         </table>
       </section>
       <section id="portfolio">
-        <h3>Portfolio</h3><br>
+        <h3 class="title">Portfolio</h3><br>
 
       </section>
       <section id="contact">
-        <h3>Contact</h3><br>
+        <h3 class="title">Contact</h3><br>
         <form class="well col-md-12">
 
           <div class="col-md-4">
@@ -126,67 +125,67 @@
 <script>
 
 
-$('.carousel').carousel({
-    interval: 3000
-});
+// $('.carousel').carousel({
+//     interval: 3000
+// });
 
 
-$(document).ready(function() {
-  if (window.innerWidth < 950) {
-    $('.nameDisplay').css({
-      'text-align': 'center',
-      'padding-left': '0px'
-    });
-    $('#logo').css({
-      'margin-top': '0px'
-    });
-    $('.tableOfContents').css({
-      'text-align': 'center',
-      'padding-right': '-15px',
-      'margin-top': '-25px'
-    });
-    $('.emails').css({
-      'margin-left': '0px'
-    });
-  }
-});
+// $(document).ready(function() {
+//   if (window.innerWidth < 950) {
+//     $('.nameDisplay').css({
+//       'text-align': 'center',
+//       'padding-left': '0px'
+//     });
+//     $('#logo').css({
+//       'margin-top': '0px'
+//     });
+//     $('.tableOfContents').css({
+//       'text-align': 'center',
+//       'padding-right': '-15px',
+//       'margin-top': '-25px'
+//     });
+//     $('.emails').css({
+//       'margin-left': '0px'
+//     });
+//   }
+// });
 
-$(window).resize(function() {
-  if (window.innerWidth < 950) {
-    $('.nameDisplay').css({
-      'text-align': 'center',
-      'padding-left': '0px'
-    });
-    $('#logo').css({
-      'margin-top': '0px'
-    });
-    $('.tableOfContents').css({
-      'text-align': 'center',
-      'padding-right': '-15px',
-      'margin-top': '-25px'
-    });
-    $('.emails').css({
-      'margin-left': '0px'
-    });
-  }
-  else if (window.innerWidth >= 950) {
-    $('.nameDisplay').css({
-      'text-align': 'left',
-      'padding-left': '15px'
-    });
-    $('#logo').css({
-      'margin-top': '30px'
-    });
-    $('.tableOfContents').css({
-      'text-align': 'right',
-      'padding-right': '0px',
-      'margin-top': '0px'
-    });
-    $('.emails').css({
-      'margin-left': '20px'
-    });
-  }
-});
+// $(window).resize(function() {
+//   if (window.innerWidth < 950) {
+//     $('.nameDisplay').css({
+//       'text-align': 'center',
+//       'padding-left': '0px'
+//     });
+//     $('#logo').css({
+//       'margin-top': '0px'
+//     });
+//     $('.tableOfContents').css({
+//       'text-align': 'center',
+//       'padding-right': '-15px',
+//       'margin-top': '-25px'
+//     });
+//     $('.emails').css({
+//       'margin-left': '0px'
+//     });
+//   }
+//   else if (window.innerWidth >= 950) {
+//     $('.nameDisplay').css({
+//       'text-align': 'left',
+//       'padding-left': '15px'
+//     });
+//     $('#logo').css({
+//       'margin-top': '30px'
+//     });
+//     $('.tableOfContents').css({
+//       'text-align': 'right',
+//       'padding-right': '0px',
+//       'margin-top': '0px'
+//     });
+//     $('.emails').css({
+//       'margin-left': '20px'
+//     });
+//   }
+// });
 
 
 $('#services, #portfolio, #contact').hide();
